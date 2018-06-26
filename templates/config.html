@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elección de parámetros</title>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="http://d3js.org/d3.geo.projection.v0.min.js" charset="utf-8"></script>
+    <script src="http://trifacta.github.com/vega/vega.js"></script>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+    <br>
+
+  <form name="login-form" class="login-form" action="result.html" method="POST">
+        {% csrf_token %}
+		<div class="header">
+		<h1>Elección de parámetros</h1>
+		<span>Por favor, elija los parámetros de análisis</span>
+		</div>
+        <div class="content">
+        <label>Seleccione idioma</label>
+		<select name = "drop1" class="form-control">
+            <option value="all" selected="selected">Todos</option>
+            <option value="en">Inglés</option>
+            <option value="es">Español</option>
+            <option value="pt">Portugués</option>
+        </select>
+        </div>
+
+           <div class="content">
+        <label>Seleccione estacion</label>
+		<select name = "drop2" class="form-control">
+            <option value="todo" selected="selected">Todas</option>
+            <option value="primavera">Primavera</option>
+            <option value="invierno">Invierno</option>
+            <option value="otono">Otoño</option>
+            <option value="verano">Verano</option>
+        </select>
+        </div>
+
+     <!-- <div class="content">
+		<label>Seleccione Hashtags (opcional)</label>
+        <select multiple name="drop3">
+            <option value="" selected="selected">- Selecciona hashtags -</option>
+            <option value="sanidadpublica">SanidadPublica</option>
+            <option value="sanidadprivada">SanidadPrivada</option>
+            <option value="{'sanidad':'privada'}">Sanidad+privada</option>
+            <option value="{'sanidad':'publica'}">Sanidad+publica</option>
+            <option value="osasun">osasun</option>
+            <option value="saúde">saúde</option>
+            <option value="{'lista':'espera'}">lista+de+espera</option>
+            <option value="{'centro':'salud'}">centro+de+salud</option>
+            <option value="{'centre':'salut'}">Centre+de+Salut</option>
+            <option value="urgencias">urgencias</option>
+            <option value="{'atenció':'primària'}">atenció+primària</option>
+            <option value="urgències">urgències</option>
+            <option value="urxencias">urxencias</option>
+            <option value="{'llista':'d'espera'}">Llista+d’espera</option>
+
+
+        </select>
+        </div> -->
+		<div class="footer">
+        <input class="button" type="submit" value="Acceder">
+		</div>
+
+	</form>
+</body>
+
+</html>

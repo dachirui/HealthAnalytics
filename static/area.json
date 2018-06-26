@@ -1,0 +1,181 @@
+{
+  "axes": [
+    {
+      "scale": "x",
+      "title": "Meses",
+      "type": "x"
+    },
+    {
+      "scale": "y",
+      "title": "N\u00ba Tweets",
+      "type": "y"
+    }
+  ],
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        {
+          "col": "created_at",
+          "idx": 1490918400000,
+          "val": 554
+        },
+        {
+          "col": "created_at",
+          "idx": 1493510400000,
+          "val": 0
+        },
+        {
+          "col": "created_at",
+          "idx": 1496188800000,
+          "val": 0
+        },
+        {
+          "col": "created_at",
+          "idx": 1498780800000,
+          "val": 0
+        },
+        {
+          "col": "created_at",
+          "idx": 1501459200000,
+          "val": 6
+        },
+        {
+          "col": "created_at",
+          "idx": 1504137600000,
+          "val": 7
+        },
+        {
+          "col": "created_at",
+          "idx": 1506729600000,
+          "val": 0
+        },
+        {
+          "col": "created_at",
+          "idx": 1509408000000,
+          "val": 0
+        },
+        {
+          "col": "created_at",
+          "idx": 1512000000000,
+          "val": 2
+        },
+        {
+          "col": "created_at",
+          "idx": 1514678400000,
+          "val": 17
+        },
+        {
+          "col": "created_at",
+          "idx": 1517356800000,
+          "val": 19
+        },
+        {
+          "col": "created_at",
+          "idx": 1519776000000,
+          "val": 1
+        },
+        {
+          "col": "created_at",
+          "idx": 1522454400000,
+          "val": 0
+        },
+        {
+          "col": "created_at",
+          "idx": 1525046400000,
+          "val": 2
+        },
+        {
+          "col": "created_at",
+          "idx": 1527724800000,
+          "val": 2
+        }
+      ]
+    }
+  ],
+  "height": 500,
+  "legends": [],
+  "marks": [
+    {
+      "from": {
+        "data": "table",
+        "transform": [
+          {
+            "keys": [
+              "data.col"
+            ],
+            "type": "facet"
+          }
+        ]
+      },
+      "marks": [
+        {
+          "properties": {
+            "enter": {
+              "stroke": {
+                "field": "data.col",
+                "scale": "color"
+              },
+              "strokeWidth": {
+                "value": 2
+              },
+              "x": {
+                "field": "data.idx",
+                "scale": "x"
+              },
+              "y": {
+                "field": "data.val",
+                "scale": "y"
+              }
+            }
+          },
+          "type": "line"
+        }
+      ],
+      "type": "group"
+    }
+  ],
+  "padding": "auto",
+  "scales": [
+    {
+      "domain": {
+        "data": "table",
+        "field": "data.idx"
+      },
+      "name": "x",
+      "range": "width",
+      "type": "time"
+    },
+    {
+      "domain": {
+        "data": "table",
+        "field": "data.val"
+      },
+      "name": "y",
+      "nice": true,
+      "range": "height"
+    },
+    {
+      "domain": {
+        "data": "table",
+        "field": "data.col"
+      },
+      "name": "color",
+      "range": [
+        "#9e0142",
+        "#d53e4f",
+        "#f46d43",
+        "#fdae61",
+        "#fee08b",
+        "#ffffbf",
+        "#e6f598",
+        "#abdda4",
+        "#66c2a5",
+        "#3288bd",
+        "#5e4fa2"
+      ],
+      "type": "ordinal"
+    }
+  ],
+  "width": 960
+}

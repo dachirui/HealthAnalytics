@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="1;url=/TweetApp/final/" />
+    <title>Bienvenido</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body style="text-align: center;">
+<br>
+ <form name="login-form" class="login-form" action="result.html" method="POST">
+        {% csrf_token %}
+		<div class="header">
+		<h1>Usuario/a: <b>{{ username }}</b></h1>
+
+		</div>
+		<div class="content">
+            <span>Por favor, espere hasta que le redirijamos al panel del control</span>
+		</div>
+
+		<div class="footer">
+            <span>¡Gracias!</span>
+		</div>
+
+	</form>
+</body>
+</html>

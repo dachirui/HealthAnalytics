@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio de sesión</title>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="http://d3js.org/d3.geo.projection.v0.min.js" charset="utf-8"></script>
+    <script src="http://trifacta.github.com/vega/vega.js"></script>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    {% if error %}
+        <script>
+            alert('Fallo de autenticación, inténtelo de nuevo o regístrese');
+        </script>
+    {% endif %}
+</head>
+<body>
+    <br>
+
+  <form name="login-form" class="login-form" action="config.html" method="POST">
+        {% csrf_token %}
+		<div class="header">
+		<h1>Bienvenido a Health Analytics</h1>
+		<span>Por favor, inicie sesión</span>
+		</div>
+
+		<div class="content">
+		<input name="username" type="text" class="input username" placeholder="Usuario" />
+		<div class="user-icon"></div>
+		<input name="password" type="password" class="input password" placeholder="Contraseña" />
+		<div class="pass-icon"></div>
+		</div>
+
+		<div class="footer">
+            <p>¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+        <input class="button" type="submit" value="Entrar">
+		</div>
+
+	</form>
+</body>
+
+</html>

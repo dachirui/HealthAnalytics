@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de usuario</title>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="http://d3js.org/d3.geo.projection.v0.min.js" charset="utf-8"></script>
+    <script src="http://trifacta.github.com/vega/vega.js"></script>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+    <br>
+
+  <form name="login-form" class="login-form" action="http://127.0.0.1:8000/TweetApp/login/" method="POST">
+        {% csrf_token %}
+		<div class="header">
+		<h1>Registro de usuario</h1>
+		<span>Por favor, rellene los campos para realizar el registro</span>
+		</div>
+        <div class="content">
+		<input name="email" type="text" class="input username" placeholder="Correo electrónico" />
+		<input name="username" type="text" class="input password" placeholder="Usuario" />
+		<input name="password" type="password" class="input password" placeholder="Contraseña" />
+		</div>
+
+		<div class="footer">
+        <input class="button" type="submit" value="Registro">
+		</div>
+
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de opciones</title>
+</head>
+<body>
+    <h1>Este es el formulario para la elección de los diagramas</h1>
+    <br>
+    <form action="/TweetApp/grafico/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit" />
+</form>
+</body>
+</html>
