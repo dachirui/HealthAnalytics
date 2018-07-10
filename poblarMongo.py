@@ -1,6 +1,6 @@
 #!/usr/bin/python
 #-*- encoding: utf-8 -*-
-
+####################################################USO: Pasar como agumento el hashtag que se quiera descargar#######################333333
 import json
 import pymongo
 import sys
