@@ -44,7 +44,7 @@ cache_english_stopwords = stopwords.words('english')  # type: object
 cache_spanish_stopwords = stopwords.words('spanish')  # type: object
 cache_portuguese_stopwords = stopwords.words('portuguese')  # type: object
 
-client = textapi.Client('fa3ed458', 'f7904358a4d58ce3fa0d9415801bb481')
+client = textapi.Client('XXXXXXXXXXXXXX', 'XXXXXXXXXXXX')
 
 # punctuation = list(string.punctuation)
 # stop = stopwords.words('spanish') + stopwords.words('english') + punctuation + ['rt', 'via', 'RT', '...', 'sa']
